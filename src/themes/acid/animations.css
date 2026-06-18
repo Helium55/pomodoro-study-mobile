@@ -1,0 +1,26 @@
+@keyframes acid-flash {
+  0%,
+  100% {
+    color: var(--color-fg);
+    border-color: var(--color-fg);
+  }
+
+  50% {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}
+
+@keyframes acid-scan {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0);
+  }
+}
+
+.acid-flash {
+  animation: acid-flash 420ms var(--ease-snap) 4;
+}

@@ -1,0 +1,30 @@
+.DS_Store
+node_modules
+.superpowers/
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Tauri / Rust
+src-tauri/target/
+
+# Android signing secrets
+*.jks
+*.keystore
+key.properties
+
+# Frontend
+dist/
+outputs/
+pnpm-debug.log*
+*.log
+
+# OS / Editor
+Thumbs.db
+.vscode/
+.idea/

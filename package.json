@@ -1,0 +1,51 @@
+{
+  "name": "pomodoro-study",
+  "version": "0.2.0",
+  "description": "Desktop study-focused pomodoro app with goals, tasks, statistics, and theme packs.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint \"src/**/*.{ts,svelte}\" && stylelint \"src/**/*.{css,svelte}\"",
+    "format": "prettier --write \"src/**/*.{ts,svelte,css,json}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tauri": "tauri"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@lucide/svelte": "^1.18.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.57.1",
+    "@sveltejs/adapter-static": "^3.0.6",
+    "@sveltejs/kit": "^2.9.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "@tauri-apps/cli": "^2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/svelte": "^5.3.1",
+    "@types/node": "^25.9.3",
+    "@typescript-eslint/eslint-plugin": "^8.61.1",
+    "@typescript-eslint/parser": "^8.61.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-svelte": "^3.19.0",
+    "globals": "^17.6.0",
+    "jsdom": "^29.1.1",
+    "postcss-html": "^1.8.1",
+    "prettier": "^3.8.4",
+    "prettier-plugin-svelte": "^4.1.1",
+    "stylelint": "^17.13.0",
+    "stylelint-config-standard": "^40.0.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "svelte-eslint-parser": "^1.8.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}

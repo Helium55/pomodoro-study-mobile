@@ -1,0 +1,23 @@
+[data-theme='acid'] {
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #141414;
+  --color-fg: #ffffff;
+  --color-fg-muted: #8d8d8d;
+  --color-accent: #c6ff00;
+  --color-accent-low: rgb(198 255 0 / 16%);
+  --color-border: #1f1f1f;
+  --color-success: #c6ff00;
+  --color-danger: #ffffff;
+  --font-display: Arial Black, Impact, Helvetica Neue, Arial, sans-serif;
+  --font-body: Helvetica Neue, Arial, sans-serif;
+  --font-mono: Consolas, SFMono-Regular, Menlo, monospace;
+  --radius: 0;
+  --border-width: 2px;
+  --shadow-hard-sm: 4px 4px 0 var(--color-accent);
+  --shadow-hard-md: 8px 8px 0 var(--color-accent);
+  --shadow-hard-lg: 12px 12px 0 var(--color-accent);
+  --ease-snap: steps(3, end);
+  --ease-smooth: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 120ms;
+  --duration-base: 220ms;
+}
