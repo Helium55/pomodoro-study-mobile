@@ -16,6 +16,7 @@
   <div class="themes">
     {#each themes as theme (theme.id)}
       <button
+        class="motion-press"
         type="button"
         class:active={settings.state.theme === theme.id}
         disabled={theme.status !== 'available'}

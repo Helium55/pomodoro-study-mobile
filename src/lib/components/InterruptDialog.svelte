@@ -19,7 +19,7 @@
 </script>
 
 {#if open}
-  <div class="backdrop">
+  <div class="backdrop motion-page">
     <form
       class="dialog"
       onsubmit={(event) => {
@@ -29,14 +29,14 @@
     >
       <header>
         <h2>{copy.dialog.interruptTitle}</h2>
-        <button type="button" aria-label={copy.dialog.close} onclick={onCancel}>
+        <button class="motion-press" type="button" aria-label={copy.dialog.close} onclick={onCancel}>
           <X size={18} />
         </button>
       </header>
       <textarea bind:value={reason} placeholder={copy.dialog.reason}></textarea>
       <div class="actions">
-        <button type="button" onclick={onCancel}>{copy.dialog.cancel}</button>
-        <button class="primary" type="submit">{copy.dialog.save}</button>
+        <button class="motion-press" type="button" onclick={onCancel}>{copy.dialog.cancel}</button>
+        <button class="primary motion-press" type="submit">{copy.dialog.save}</button>
       </div>
     </form>
   </div>

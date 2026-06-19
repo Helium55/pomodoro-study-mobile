@@ -40,7 +40,7 @@
   </header>
 
   <div class="columns">
-    <section class="pane">
+    <section class="pane motion-edge">
       <header class="pane-head">
         <h2>{copy.tasks.goals}</h2>
       </header>
@@ -53,7 +53,7 @@
       >
         <input bind:value={goalTitle} placeholder={copy.tasks.goalTitle} />
         <input bind:value={goalDescription} placeholder={copy.tasks.description} />
-        <button type="submit" aria-label={copy.tasks.addGoal}>
+        <button class="motion-press" type="submit" aria-label={copy.tasks.addGoal}>
           <Plus size={17} />
           <span>{copy.tasks.addGoal}</span>
         </button>
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <section class="pane">
+    <section class="pane motion-edge">
       <header class="pane-head">
         <h2>{copy.tasks.tasks}</h2>
       </header>
@@ -84,7 +84,7 @@
           {/each}
         </select>
         <input bind:value={estimatedPomos} type="number" min="1" max="24" />
-        <button type="submit" aria-label={copy.tasks.addTask}>
+        <button class="motion-press" type="submit" aria-label={copy.tasks.addTask}>
           <Plus size={17} />
           <span>{copy.tasks.addTask}</span>
         </button>

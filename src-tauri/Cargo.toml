@@ -1,6 +1,6 @@
 [package]
 name = "pomodoro-study"
-version = "0.2.0"
+version = "0.3.0"
 description = "Desktop study-focused pomodoro app"
 authors = ["you"]
 edition = "2021"

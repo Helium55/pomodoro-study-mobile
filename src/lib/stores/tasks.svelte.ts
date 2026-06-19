@@ -4,13 +4,17 @@ import type { Task } from '../types'
 
 const selectedKey = 'pomodoro-study.selected-task'
 
+function canUseLocalStorage() {
+  return browser && typeof localStorage !== 'undefined'
+}
+
 class TasksStore {
   items = $state<Task[]>([])
   selectedTaskId = $state<number | null>(null)
   loaded = $state(false)
 
   constructor() {
-    if (browser) {
+    if (canUseLocalStorage()) {
       const raw = localStorage.getItem(selectedKey)
       this.selectedTaskId = raw ? Number(raw) : null
     }
@@ -34,7 +38,7 @@ class TasksStore {
 
   select(id: number | null) {
     this.selectedTaskId = id
-    if (browser) {
+    if (canUseLocalStorage()) {
       if (id) localStorage.setItem(selectedKey, String(id))
       else localStorage.removeItem(selectedKey)
     }

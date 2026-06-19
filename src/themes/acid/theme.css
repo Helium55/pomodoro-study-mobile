@@ -18,6 +18,8 @@
   --shadow-hard-lg: 12px 12px 0 var(--color-accent);
   --ease-snap: steps(3, end);
   --ease-smooth: cubic-bezier(0.2, 0, 0, 1);
+  --ease-precision: cubic-bezier(0.2, 0.8, 0.2, 1);
   --duration-fast: 120ms;
   --duration-base: 220ms;
+  --duration-slow: 360ms;
 }

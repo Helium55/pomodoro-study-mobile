@@ -121,6 +121,8 @@ Test on both phone and tablet:
 14. JSON export creates a backup.
 15. JSON import restores a backup.
 16. Phone portrait, phone landscape, tablet portrait, and tablet landscape have no text or control overlap.
+17. Button presses, selected tasks, route entrances, and progress feedback feel consistent with the desktop Acid motion system.
+18. Android system "Remove animations" or reduced-motion settings do not leave essential information hidden.
 
 ## Environment Status
 

@@ -23,16 +23,16 @@
   const copy = $derived(getCopy(settings.state.language))
 </script>
 
-<article class="row" class:selected>
+<article class="row motion-edge" class:selected class:motion-selected={selected}>
   <button
-    class="square"
+    class="square motion-press"
     type="button"
     onclick={() => onComplete(task)}
     aria-label={copy.dialog.completeTask}
   >
     <Check size={15} />
   </button>
-  <button class="main" type="button" onclick={() => onSelect(task)}>
+  <button class="main motion-press" type="button" onclick={() => onSelect(task)}>
     <span class="title">{task.title}</span>
     <span class="sub">
       <ProgressBar value={ratio} total={Math.max(1, task.estimated_pomos)} />
@@ -40,7 +40,7 @@
     </span>
   </button>
   <button
-    class="icon"
+    class="icon motion-press"
     type="button"
     onclick={() => onSelect(task)}
     aria-label={copy.dialog.selectTask}
@@ -48,7 +48,7 @@
     <Play size={15} />
   </button>
   <button
-    class="icon"
+    class="icon motion-press"
     type="button"
     onclick={() => onDelete(task)}
     aria-label={copy.dialog.deleteTask}

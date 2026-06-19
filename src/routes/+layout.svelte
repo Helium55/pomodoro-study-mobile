@@ -35,7 +35,7 @@
   class:tablet={profile?.formFactor === 'tablet'}
 >
   <Sidebar />
-  <main class="content">
+  <main class="content motion-page">
     {@render children()}
   </main>
 </div>

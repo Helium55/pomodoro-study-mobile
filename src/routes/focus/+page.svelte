@@ -14,6 +14,7 @@
 
   let interruptOpen = $state(false)
   let stats = $state<StatsSummary | null>(null)
+  let selectedTaskValue = $derived(tasks.selectedTaskId)
   const copy = $derived(getCopy(settings.state.language))
 
   onMount(() => {
@@ -53,17 +54,14 @@
     </div>
   </header>
 
-  <div class="taskbar">
+  <div class="taskbar motion-edge">
     <label for="task-select">{copy.focus.currentTask}</label>
     <select
       id="task-select"
-      value={tasks.selectedTaskId ? String(tasks.selectedTaskId) : ''}
-      onchange={(event) => {
-        const value = (event.target as HTMLSelectElement).value
-        tasks.select(value ? Number(value) : null)
-      }}
+      bind:value={selectedTaskValue}
+      onchange={() => tasks.select(selectedTaskValue)}
     >
-      <option value="">{copy.focus.noTask}</option>
+      <option value={null}>{copy.focus.noTask}</option>
       {#each tasks.active as task (task.id)}
         <option value={task.id}>{task.title}</option>
       {/each}
@@ -81,38 +79,43 @@
   </div>
 
   <div class="controls" aria-label={copy.focus.controls}>
-    <button class="primary" type="button" onclick={startOrResume}>
+    <button class="primary motion-press" type="button" onclick={startOrResume}>
       <Play size={18} />
       <span>{timer.status === 'paused' ? copy.focus.resume : copy.focus.start}</span>
     </button>
-    <button type="button" onclick={() => timer.pause()} disabled={timer.status !== 'running'}>
+    <button class="motion-press" type="button" onclick={() => timer.pause()} disabled={timer.status !== 'running'}>
       <Pause size={18} />
       <span>{copy.focus.pause}</span>
     </button>
-    <button type="button" onclick={() => (interruptOpen = true)} disabled={timer.phase !== 'focus'}>
+    <button
+      class="motion-press"
+      type="button"
+      onclick={() => (interruptOpen = true)}
+      disabled={timer.phase !== 'focus'}
+    >
       <CircleStop size={18} />
       <span>{copy.focus.interrupt}</span>
     </button>
-    <button type="button" onclick={() => timer.finishPhase()} disabled={timer.status === 'idle'}>
+    <button class="motion-press" type="button" onclick={() => timer.finishPhase()} disabled={timer.status === 'idle'}>
       <SkipForward size={18} />
       <span>{copy.focus.skip}</span>
     </button>
-    <button type="button" onclick={() => timer.reset()}>
+    <button class="motion-press" type="button" onclick={() => timer.reset()}>
       <RotateCcw size={18} />
       <span>{copy.focus.reset}</span>
     </button>
   </div>
 
   <footer class="metrics">
-    <div>
+    <div class="motion-edge">
       <span>{copy.focus.focusTime}</span>
       <strong>{formatHours(stats?.today.focus_secs ?? 0)}</strong>
     </div>
-    <div>
+    <div class="motion-edge">
       <span>{copy.focus.interrupts}</span>
       <strong>{stats?.today.interrupts ?? 0}</strong>
     </div>
-    <div>
+    <div class="motion-edge">
       <span>{copy.focus.selected}</span>
       <strong>{tasks.selected?.title ?? copy.focus.noTask}</strong>
     </div>

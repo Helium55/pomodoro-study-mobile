@@ -26,21 +26,21 @@
   </header>
 
   <div class="cards">
-    <div>
+    <div class="motion-edge">
       <span>{copy.stats.todayPomodoros}</span>
       <strong>{stats?.today.pomos ?? 0}</strong>
     </div>
-    <div>
+    <div class="motion-edge">
       <span>{copy.stats.todayFocus}</span>
       <strong>{formatHours(stats?.today.focus_secs ?? 0)}</strong>
     </div>
-    <div>
+    <div class="motion-edge">
       <span>{copy.stats.streak}</span>
       <strong>{stats?.streak_days ?? 0}</strong>
     </div>
   </div>
 
-  <section class="panel">
+  <section class="panel motion-edge">
     <h2>{copy.stats.last7Days}</h2>
     <div class="bars">
       {#each stats?.last_7_days ?? [] as day (day.date)}
@@ -54,7 +54,7 @@
   </section>
 
   <section class="grid">
-    <div class="panel">
+    <div class="panel motion-edge">
       <h2>{copy.stats.byGoal}</h2>
       {#each stats?.by_goal ?? [] as row (row.goal_id ?? row.goal_title)}
         <div class="line">
@@ -63,7 +63,7 @@
         </div>
       {/each}
     </div>
-    <div class="panel">
+    <div class="panel motion-edge">
       <h2>{copy.stats.interruptions}</h2>
       {#each stats?.top_interrupts ?? [] as row (row.reason)}
         <div class="line">

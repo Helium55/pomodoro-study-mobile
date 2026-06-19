@@ -101,12 +101,14 @@ class TimerStore {
   }
 
   schedule() {
-    if (!browser || this.status !== 'running') return
+    if (!browser || this.status !== 'running' || typeof requestAnimationFrame === 'undefined') {
+      return
+    }
     this.frame = requestAnimationFrame(() => this.tick())
   }
 
   stopLoop() {
-    if (browser && this.frame) {
+    if (browser && this.frame && typeof cancelAnimationFrame !== 'undefined') {
       cancelAnimationFrame(this.frame)
     }
     this.frame = 0

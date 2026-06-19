@@ -2,7 +2,7 @@
 
 Android mobile build of Pomodoro Study. This repository contains the mobile-ready Tauri 2 + Svelte 5 + Rust + SQLite project, including the generated Android project files under `src-tauri/gen/android`.
 
-The mobile version intentionally tracks the desktop version number. Current version: `0.2.0`.
+The mobile version intentionally tracks the desktop version number. Current version: `0.3.0`.
 
 ## Quick Start
 
@@ -38,6 +38,7 @@ Android stores app data in the app sandbox for `study.pomodoro.app`.
 
 - [docs/ANDROID_MOBILE.md](docs/ANDROID_MOBILE.md)
 - [docs/superpowers/specs/2026-06-18-android-mobile-design.md](docs/superpowers/specs/2026-06-18-android-mobile-design.md)
+- [docs/superpowers/specs/2026-06-19-motion-design.md](docs/superpowers/specs/2026-06-19-motion-design.md)
 - [docs/AGENT_GUIDE.md](docs/AGENT_GUIDE.md)
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - [docs/DATA_MODEL.md](docs/DATA_MODEL.md)

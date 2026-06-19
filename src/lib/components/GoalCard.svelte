@@ -8,7 +8,7 @@
   const copy = $derived(getCopy(settings.state.language))
 </script>
 
-<article class="goal">
+<article class="goal motion-edge">
   <Target size={18} />
   <div>
     <h3>{goal.title}</h3>
@@ -16,7 +16,7 @@
       <p>{goal.description}</p>
     {/if}
   </div>
-  <button type="button" onclick={() => onArchive(goal)} aria-label={copy.dialog.archiveGoal}>
+  <button class="motion-press" type="button" onclick={() => onArchive(goal)} aria-label={copy.dialog.archiveGoal}>
     <Archive size={16} />
   </button>
 </article>

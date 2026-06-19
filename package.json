@@ -1,6 +1,6 @@
 {
   "name": "pomodoro-study",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Desktop study-focused pomodoro app with goals, tasks, statistics, and theme packs.",
   "type": "module",
   "scripts": {

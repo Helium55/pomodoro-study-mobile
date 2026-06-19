@@ -13,8 +13,22 @@
 - No rounded component corners.
 - Box shadows are hard offset shadows with no blur.
 - Use character progress bars instead of smooth decorative fills.
+- Keep micro-interactions on top of the existing UI: no new layout shell, no palette swap, no decorative gradients, no soft cards.
+- Respect `prefers-reduced-motion`; theme animations must have a reduced-motion branch.
 
 Stylelint enforces these rules for component CSS. Theme CSS is exempt because it defines token values.
+
+## Motion System
+
+The Acid motion system lives in `src/themes/acid/animations.css`.
+
+- `motion-page` gives page and dialog surfaces a short entrance.
+- `motion-edge` adds a thin acid scan line to existing bordered surfaces.
+- `motion-press` gives buttons and nav items a 1px tactile press.
+- `motion-selected` gives selected rows a one-shot pulse.
+- `motion-progress` gives text progress bars a subtle tick.
+
+The target feel is "Precision Pulse": short, restrained, and readable during study sessions. Prefer 120-360ms durations and tokenized easing from `src/themes/acid/theme.css`.
 
 ## Adding A Theme
 

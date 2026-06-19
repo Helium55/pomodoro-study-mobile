@@ -60,7 +60,7 @@
     <h1>{copy.settings.title}</h1>
   </header>
 
-  <section class="section">
+  <section class="section motion-edge">
     <h2>{copy.settings.general}</h2>
     <label>
       {copy.settings.language}
@@ -80,7 +80,7 @@
     </p>
   </section>
 
-  <section class="section">
+  <section class="section motion-edge">
     <h2>{copy.settings.timer}</h2>
     <label>
       {copy.settings.workDuration}
@@ -137,7 +137,7 @@
     </label>
   </section>
 
-  <section class="section">
+  <section class="section motion-edge">
     <h2>{copy.settings.notifications}</h2>
     <label class="check">
       <input
@@ -167,7 +167,7 @@
       />
     </label>
     <div class="sound-test">
-      <button type="button" onclick={testSound}>
+      <button class="motion-press" type="button" onclick={testSound}>
         <Volume2 size={17} />
         <span>{copy.settings.testSound}</span>
       </button>
@@ -216,17 +216,17 @@
     <p class="android-guidance">{copy.settings.androidGuidance}</p>
   </section>
 
-  <section class="section actions">
+  <section class="section actions motion-edge">
     <h2>{copy.settings.data}</h2>
-    <button type="button" onclick={exportData}>
+    <button class="motion-press" type="button" onclick={exportData}>
       <Download size={17} />
       <span>{copy.settings.exportJson}</span>
     </button>
-    <button type="button" onclick={importData}>
+    <button class="motion-press" type="button" onclick={importData}>
       <Upload size={17} />
       <span>{copy.settings.importJson}</span>
     </button>
-    <button type="button" onclick={resetData}>
+    <button class="motion-press" type="button" onclick={resetData}>
       <RotateCcw size={17} />
       <span>{copy.settings.reset}</span>
     </button>

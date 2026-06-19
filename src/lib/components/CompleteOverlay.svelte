@@ -9,7 +9,7 @@
 
 {#if show}
   <div class="overlay" role="status">
-    <button type="button" onclick={onClose}>{copy.dialog.completeOverlay}</button>
+    <button class="motion-press" type="button" onclick={onClose}>{copy.dialog.completeOverlay}</button>
   </div>
 {/if}
 

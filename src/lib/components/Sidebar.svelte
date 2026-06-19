@@ -27,6 +27,7 @@
       {@const Icon = item.icon}
       <a
         href={resolve(item.href)}
+        class="motion-press"
         class:active={page.url.pathname === item.href}
         aria-current={page.url.pathname === item.href ? 'page' : undefined}
       >
@@ -86,6 +87,9 @@
     letter-spacing: 2px;
     padding: 0 16px;
     text-decoration: none;
+    transition:
+      background-color var(--duration-fast) var(--ease-precision),
+      color var(--duration-fast) var(--ease-precision);
   }
 
   a:hover,

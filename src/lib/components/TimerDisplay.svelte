@@ -17,7 +17,7 @@
   } = $props()
 </script>
 
-<section class="timer" class:paused={status === 'paused'}>
+<section class="timer motion-edge" class:paused={status === 'paused'} class:running={status === 'running'}>
   <div class="meta">{label} / {statusLabel}</div>
   <div class="digits">{formatSeconds(remainingSecs)}</div>
   <ProgressBar value={progress} total={14} />
@@ -37,6 +37,10 @@
 
   .timer.paused {
     border-color: var(--color-accent);
+  }
+
+  .timer.running {
+    border-color: var(--color-fg);
   }
 
   .meta {
