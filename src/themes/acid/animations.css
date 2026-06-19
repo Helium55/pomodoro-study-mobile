@@ -33,19 +33,13 @@
   }
 }
 
-@keyframes acid-edge-scan {
+@keyframes acid-edge-rest {
   0% {
     opacity: 0;
-    transform: translateX(-104%);
-  }
-
-  18% {
-    opacity: 1;
   }
 
   100% {
-    opacity: 0;
-    transform: translateX(104%);
+    opacity: 0.22;
   }
 }
 
@@ -96,13 +90,12 @@
   background: var(--color-accent);
   opacity: 0;
   pointer-events: none;
-  transform: translateX(-104%);
 }
 
 .motion-edge:hover::after,
 .motion-edge:focus-within::after,
 .motion-edge.motion-selected::after {
-  animation: acid-edge-scan var(--duration-slow) var(--ease-precision) both;
+  animation: acid-edge-rest var(--duration-base) var(--ease-precision) both;
 }
 
 .motion-press {

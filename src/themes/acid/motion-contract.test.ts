@@ -13,9 +13,10 @@ describe('acid motion contract', () => {
     const css = read('src/themes/acid/animations.css')
 
     expect(css).toContain('@keyframes acid-page-in')
-    expect(css).toContain('@keyframes acid-edge-scan')
+    expect(css).toContain('@keyframes acid-edge-rest')
     expect(css).toContain('@keyframes acid-selected-pulse')
     expect(css).toContain('@keyframes acid-progress-tick')
+    expect(css).not.toContain('translateX')
     expect(css).toContain('.motion-page')
     expect(css).toContain('.motion-press')
     expect(css).toContain('.motion-selected')
